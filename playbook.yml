@@ -1,0 +1,15 @@
+---
+- name: First play
+  hosts: target
+  tasks:
+
+    - name: copy a file
+      copy:
+        src: practise/file.conf
+        dest: file.conf
+
+    - name: delete file in remote
+      file:
+        path: file.conf
+        state: absent
+...
